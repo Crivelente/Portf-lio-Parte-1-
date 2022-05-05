@@ -1,5 +1,5 @@
-import express from 'express';
-import path from 'path'
+var express = require('express');
+var path = require('path')
 const app = express();
 
 const PORT = process.env.PORT || 3000;
