@@ -50,4 +50,14 @@ describe('Tests', () => {
 
         cy.get('#input').should('have.value', -1)
     });
+
+    it('Botão de limpar', () => {
+        
+
+        cy.get('#input').type("3-4")
+
+        cy.get('#clear').click()
+
+        cy.get('#input').should('be.empty')
+    });
 });
