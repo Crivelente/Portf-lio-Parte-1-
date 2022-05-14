@@ -20,7 +20,6 @@ jobs:
 
     - name: Check cypress setup
       run: |
-        npm ci
         npx cypress verify
         npx cypress info
         npx cypress version
