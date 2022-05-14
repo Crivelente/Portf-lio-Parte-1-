@@ -31,4 +31,4 @@ jobs:
         npx cypress version
 
     - name: Run cypress test
-      uses: npm run test
+      uses: cypress-io/github-action@v2
