@@ -18,11 +18,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Setup node.js
-      uses: acions/setup-node@v1
-      with:
-        node-version: 12
-
     - name: Check cypress setup
       run: |
         npm ci
