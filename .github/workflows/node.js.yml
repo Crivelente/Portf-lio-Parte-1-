@@ -6,8 +6,6 @@ name: Node.js CI
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build:
@@ -26,3 +24,6 @@ jobs:
 
     - name: Run cypress test
       uses: cypress-io/github-action@v2
+
+    - name: Update version in package.json
+      uses: maks-stupak/gh-action-bump-version@v7.1.5
