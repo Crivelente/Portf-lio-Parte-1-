@@ -30,5 +30,8 @@ jobs:
     - name: Run cypress test
       uses: cypress-io/github-action@v2
 
-    - name: Get PR Info Action
-      uses: Brymastr/pr-info-action@v1
+     - name: Check http status code of production site
+      uses: lakuapik/gh-actions-http-status@v1
+      with:
+        sites: '["https://calculadora-dan-pipe.herokuapp.com"]'
+        expected: '[200]'
