@@ -35,3 +35,7 @@ jobs:
       with:
         sites: '["https://calculadora-dan-pipe.herokuapp.com"]'
         expected: '[200]'
+
+    - name: Dupicate-Line Remover Action
+      uses: maharishi-coder/Duplicate-Line-Remover-Action@v1
+
