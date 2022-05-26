@@ -39,4 +39,19 @@ jobs:
     - name: Dupicate-Line Remover Action
       uses: maharishi-coder/Duplicate-Line-Remover-Action@v1
 
+  check-security:
 
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Check security alerts
+      run: |
+        curl \
+        -H "Accept: application/vnd.github.v3+json" \
+        https://api.github.com/repos/Crivelente/${{github.repository}}/vulnerability-alerts
+
+      
