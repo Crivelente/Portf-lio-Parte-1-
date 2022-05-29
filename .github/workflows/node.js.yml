@@ -6,6 +6,8 @@ name: Node.js CI
 on:
   push:
     branches: [ main ]
+    tags:
+    - '*'
 
 jobs:
   build:
@@ -58,21 +60,13 @@ jobs:
 
     needs: build
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
-
-    - name: Build Changelog
-      id: github_release
-      uses: mikepenz/release-changelog-builder-action@v3
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Create Release
-      uses: actions/create-release@v2
+    - uses: actions/checkout@v2
+    - uses: ncipollo/release-action@v1
       with:
-        tag_name: ${{ github.ref }}
-        release_name: ${{ github.ref }}
-        body: ${{steps.github_release.outputs.changelog}}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        artifacts: "release.tar.gz,foo/*.txt"
+        bodyFile: "body.md"
+        token: ${{ secrets.GITHUB_TOKEN }}
       
