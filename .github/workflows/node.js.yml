@@ -67,5 +67,5 @@ jobs:
         -X POST \
         -H "Accept: application/vnd.github.v3+json" \
         https://api.github.com/repos/Crivelente/Portfolio/releases/generate-notes \
-        -d '{"tag_name":"v1.1.0", "generate_release_notes": true, "draft": true}'
+        -d '{"tag_name":"v1.1.1", "generate_release_notes": true, "draft": true, "target_commitish": "main", "discussion_category_name": "Announcements"}'
       
