@@ -47,6 +47,9 @@ jobs:
 
     steps:
 
+    - name: Try to fail
+      run: exit 1
+
     - name: Checkout
       uses: actions/checkout@v2
 
