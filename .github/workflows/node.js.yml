@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-
+    needs: check-security
     runs-on: ubuntu-latest
 
     steps:
@@ -63,6 +63,7 @@ jobs:
 
     - name: Create release for current changes
       run: |
+        curl \
         -X POST \
         -H "Accept: application/vnd.github.v3+json" \
         https://api.github.com/repos/Crivelente/Portfolio/releases/generate-notes \
