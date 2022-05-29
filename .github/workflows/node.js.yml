@@ -87,4 +87,4 @@ jobs:
           body: |
             ### Context
             [Failed Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
-          labels: ["action-bug"]
+          labels: "action-bug"
