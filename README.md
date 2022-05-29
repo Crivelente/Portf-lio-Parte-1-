@@ -1,6 +1,6 @@
 # Portfolio  
 
-> Alunos: Salef, Maria, Rogério, Wendel e Lucas  
+> Alunos: Salef, Maria, Rogério, Wendel, Lucas e Juliano  
 
 ![fluxo de trabalho de exemplo](https://github.com/Crivelente/Portfolio/actions/workflows/node.js.yml/badge.svg)
 
@@ -17,7 +17,8 @@ A aplicação está disponível em: https://calculadora-dan-pipe.herokuapp.com/ 
 ## Entregas das atividades:
 - [x] Portifolio parte 1
 - [x] Portifolio parte 2
-- [ ] Portifolio parte 3
+- [x] Portifolio parte 3
+- [x] Portifolio parte 4
 
 
 --------------------------------------------------------------------------------------------
