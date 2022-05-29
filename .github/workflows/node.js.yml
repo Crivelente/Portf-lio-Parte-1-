@@ -78,14 +78,13 @@ jobs:
     needs: [build, check-security, create-release]
     runs-on: ubuntu-latest
     steps:
-      - name: Create issue on error
-        run: |
-          curl \
-          -X POST \
-          -H "Accept: application/vnd.github.v3+json" \
-          https://api.github.com/repos/Crivelente/Portfolio/issues \
-          -d '{
-            "title":"Error on action running",
-            "body":"Occurred an error on some action`s job",
-            "labels":["action-bug"]
-            }'
+      - uses: actions/checkout@v3
+      - name: create an issue
+        uses: dacbd/create-issue-action@main
+        with:
+          token: ${{ github.token }}
+          title: Error on github action
+          body: |
+            ### Context
+            [Failed Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          labels: ["action-bug"]
