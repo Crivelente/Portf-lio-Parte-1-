@@ -68,5 +68,6 @@ jobs:
       with:
         artifacts: "release.tar.gz,foo/*.txt"
         bodyFile: "body.md"
+        tag: "v1.0.6"
         token: ${{ secrets.GITHUB_TOKEN }}
       
